@@ -223,9 +223,9 @@ const StyledButton = styled.div`
   }
 `;
 
-const Button = ({ classes, children }) => {
+const Button = ({ classes, children, onClick }) => {
   return (
-    <StyledButton className={classes}>
+    <StyledButton className={classes} onClick={onClick}>
       <span className="label">{children}</span>
       <span className="icon">
         <span></span>

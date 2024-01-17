@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
 
 // Keyframe for the spinning animation
@@ -7,14 +6,14 @@ const spin = keyframes`
   100% { transform: rotate(360deg); }
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `
 
 
-const SpinnerContainer = styled.div`
+export const SpinnerContainer = styled.div`
   margin-top: 100px;
   width: ${(props) => props.size || "40px"};
   height: ${(props) => props.size || "40px"};
@@ -25,19 +24,3 @@ const SpinnerContainer = styled.div`
   border-radius: 50%;
   animation: ${spin} ${(props) => props.speed || "0.8s"} linear infinite;
 `;
-
-const Spinner = ({ size, borderWidth, color, spinnerColor, speed }) => {
-  return (
-    <Container>
-      <SpinnerContainer
-        size={size}
-        borderWidth={borderWidth}
-        color={color}
-        spinnerColor={spinnerColor}
-        speed={speed}
-      />
-    </Container>
-  );
-};
-
-export default Spinner;

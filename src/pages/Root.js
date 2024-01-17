@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/complex/Navbar";
+import Footer from "../components/complex/Footer";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 
@@ -15,7 +15,8 @@ const AppContainer = styled.div`
 `;
 
 const MainContainer = styled.div`
-  min-height: 80vh;
+  min-height: 85vh;
+  height: 100%;
 `;
 
 

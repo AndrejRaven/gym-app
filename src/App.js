@@ -7,8 +7,10 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ErrorPage from "./pages/ErrorPage";
 import Root from "./pages/Root";
-import PrivateRoute from "./components/PrivateRoute";
-import Spinner from "./components/Spinner";
+import PrivateRoute from "./components/complex/PrivateRoute";
+import Spinner from "./components/complex/Spinner";
+import ProfileForm from "./pages/Profile";
+import ProfileDashboard from './pages/ProfileDashboard'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <PrivateRoute><Dashboard /></PrivateRoute>
+      },
+      {
+        path: 'profile',
+        element: <PrivateRoute><ProfileDashboard /></PrivateRoute>
+      },
+      {
+        path: 'profile2',
+        element: <PrivateRoute><ProfileForm /></PrivateRoute>
       },
       {
         path: "/login",
